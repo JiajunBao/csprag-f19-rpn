@@ -3,5 +3,5 @@ python:
   - "3.5"
 # command to run tests
 script:
-  - pip install pytest-cov
+  - pip3 install pytest-cov
   - pytest --cov=rpn --cov-report=html
