@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 import operator
+import readline
+import logging
 
+# log_format = '%(asctime)-10s: %(message)s'
+logging.basicConfig(level=logging.DEBUG)
 
 operators = {
     '+': operator.add,
@@ -23,7 +27,7 @@ def calculate(myarg):
             arg1 = stack.pop()
             result = function(arg1, arg2)
             stack.append(result)
-        print(stack)
+        logging.debug(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
     return stack.pop()
@@ -31,7 +35,7 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result)
+        logging.info(f"Result: {result}")
 
 if __name__ == '__main__':
     main()
