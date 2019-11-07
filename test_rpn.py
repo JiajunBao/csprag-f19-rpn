@@ -18,3 +18,4 @@ class TestBasics(unittest.TestCase):
     def test_exponentiate(self):
         result = rpn.calculate("11 2 ^")
         self.assertEqual(121, result)
+
