@@ -5,7 +5,7 @@ import readline
 import logging
 
 # log_format = '%(asctime)-10s: %(message)s'
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
 operators = {
     '+': operator.add,
@@ -14,6 +14,11 @@ operators = {
     '/': operator.truediv,
     '^': operator.pow,
 }
+
+
+# def hello(name):
+#     logging.info('hello {}'.format(name))
+
 
 def calculate(myarg):
     stack = list()

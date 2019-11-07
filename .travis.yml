@@ -4,4 +4,4 @@ python:
 # command to run tests
 script:
   - pip3 install pytest-cov
-  - pytest --cov=rpn --cov-report=html
+  - pytest --cov=rpn
