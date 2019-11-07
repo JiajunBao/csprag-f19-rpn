@@ -35,7 +35,7 @@ def calculate(myarg):
 def main():
     while True:
         result = calculate(input("rpn calc> "))
-        logging.info(f"Result: {result}")
+        logging.info("Result: {}".format(result))
 
 if __name__ == '__main__':
     main()
